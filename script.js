@@ -106,3 +106,4 @@ function draw() {
         LightningArr[i].eat();
     }
 }
+console.log(90)
