@@ -1,10 +1,8 @@
-class Predator {
+class Predator extends LivingCreature {
     constructor(x, y, index) {
-        this.x = x;
-        this.y = y;
+        super(x,y,index)
         this.energy = 8;
-        this.index = index;
-        this.directions = [];
+    
     }
 
     getNewCoordinates() {
@@ -21,19 +19,8 @@ class Predator {
     }
 
     chooseCell(character2) {
-        var found = [];
         this.getNewCoordinates()
-        for (var i in this.directions) {
-            var x = this.directions[i][0];
-            var y = this.directions[i][1];
-            if (x >= 0 && x < matrix[0].length && y >= 0 && y < matrix.length) {
-                if (matrix[y][x] == character2) {
-                    found.push(this.directions[i]);
-                }
-            }
-
-        }
-        return found;
+        return super.chooseCell(character2)
     }
     mul() {
         var newCell = random(this.chooseCell(2));

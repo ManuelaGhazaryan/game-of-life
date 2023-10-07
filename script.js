@@ -107,3 +107,8 @@ function draw() {
     }
 }
 console.log(90)
+
+var obj = {
+ "first_name" :"Kuki"
+}
+console.log(obj.first_name)
