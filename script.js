@@ -3,17 +3,17 @@ var n = 40;
 var m = 52;
 var side = 60;
 
-for (let i = 0; i<n; i ++){
+for (let i = 0; i < n; i++) {
     matrix.push([])
-    for (let j = 0; j<m; j++){
+    for (let j = 0; j < m; j++) {
         matrix[i].push(0)
     }
 }
 
-function characters(index,count){
-    for(let i = 0; i < count; i++){
-        var w = Math.floor(random(0,n));
-        var v = Math.floor(random(0,m))
+function characters(index, count) {
+    for (let i = 0; i < count; i++) {
+        var w = Math.floor(random(0, n));
+        var v = Math.floor(random(0, m))
         matrix[w][v] = index
     }
 }
@@ -24,11 +24,11 @@ var PredatorArr = [];
 var animalArr = []
 var LightningArr = []
 function setup() {
-    characters(1,400)
-    characters(2,70)
-    characters(3,40)
-    characters(4,80)
-    characters(5,50)
+    characters(1, 400)
+    characters(2, 70)
+    characters(3, 40)
+    characters(4, 80)
+    characters(5, 50)
 
 
     frameRate(5);
@@ -78,17 +78,17 @@ function draw() {
             else if (matrix[y][x] == 3) {
                 fill("navy")
             }
-            else if (matrix[y][x] == 4){
+            else if (matrix[y][x] == 4) {
                 fill("peru")
             }
-            else if (matrix[y][x] == 5){
+            else if (matrix[y][x] == 5) {
                 fill("black")
             }
 
             rect(x * side, y * side, side, side);
         }
     }
-    
+
     for (var i in grassArr) {
         grassArr[i].mul();
     }
@@ -106,9 +106,3 @@ function draw() {
         LightningArr[i].eat();
     }
 }
-console.log(90)
-
-var obj = {
- "first_name" :"Kuki"
-}
-console.log(obj.first_name)

@@ -1,13 +1,13 @@
-class GrassEater extends LivingCreature{
+class GrassEater extends LivingCreature {
     constructor(x, y, index) {
-        super(x,y,index);
+        super(x, y, index);
         this.energy = 8;
-       
+
     }
 
     getNewCoordinates() {
         this.directions = [
-            [this.x-1, this.y - 1],
+            [this.x - 1, this.y - 1],
             [this.x, this.y - 1],
             [this.x + 1, this.y - 1],
             [this.x - 1, this.y],
@@ -22,7 +22,7 @@ class GrassEater extends LivingCreature{
         this.getNewCoordinates();
         return super.chooseCell(character);
     }
- 
+
 
     mul() {
         var newCell = random(this.chooseCell(1));

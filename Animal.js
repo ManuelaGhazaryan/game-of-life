@@ -1,7 +1,7 @@
-class Animal extends LivingCreature{
+class Animal extends LivingCreature {
     constructor(x, y, index) {
-     super(x,y,index);
-     this.energy = 8;
+        super(x, y, index);
+        this.energy = 8;
     }
 
     getNewCoordinates() {
@@ -18,15 +18,15 @@ class Animal extends LivingCreature{
     }
 
     chooseCell(character) {
-    
+
         this.getNewCoordinates()
         return super.chooseCell(character);
-        
+
     }
     mul() {
         var newCell = random(this.chooseCell(1));
         if (newCell) {
-            var newani= new Animal(newCell[0], newCell[1], this.index);
+            var newani = new Animal(newCell[0], newCell[1], this.index);
             animalArr.push(newani);
             matrix[newCell[1]][newCell[0]] = 4;
         }

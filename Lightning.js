@@ -1,21 +1,21 @@
 class Lightning extends LivingCreature {
     constructor(x, y, index) {
-        super(x,y,index);
+        super(x, y, index);
         this.energy = 8;
-      
+
     }
 
     getNewCoordinates() {
         this.directions = [
             [this.x - 1, this.y - 1],
-            
+
         ];
     }
 
-    chooseCell(character2,character4) {
-        
+    chooseCell(character2, character4) {
+
         this.getNewCoordinates()
-        return super.chooseCell(character2,character4);
+        return super.chooseCell(character2, character4);
     }
     mul() {
         var newCell = random(this.chooseCell(2));
@@ -27,7 +27,7 @@ class Lightning extends LivingCreature {
     }
 
     eat() {
-        let foods = this.chooseCell(2,4)
+        let foods = this.chooseCell(2, 4)
         let food = random(foods)
         if (food) {
             this.energy++;
